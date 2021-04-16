@@ -1,0 +1,114 @@
+/* GENERAL */
+
+html {
+    font-size: 18px;
+}
+
+body {
+    margin: 0px;
+    background-color: rgb(143, 116, 75);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url("../imagenes/jay-mantri-TFyi0QOx08c-unsplash.jpg");
+    
+}
+
+img {
+    height: auto;
+    width: 12em;
+    object-fit: cover;
+}
+
+/* CABECERA */
+.cabecera {
+    height: auto;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    background-color: rgb(187, 228, 167);
+    border-bottom: 2px solid rgb(135, 172, 126);
+    padding: 1em 0.5em 1em 0.5em
+}
+
+#nav_rutas {
+    text-align: center;
+}
+
+/* DROPDOWN */
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+
+/* CONTENIDO */
+
+.contenido {
+    margin: 7em 0px 6em 0px;
+}
+
+.ruta {
+    margin: 1em 12.5% 1em 12.5%;
+    padding: 0.5em 1em 0.5em 1em;
+    text-align: center;
+    background-color: rgba(146, 223, 146, 0.5);
+}
+
+.ruta > img {
+    width: 75%;
+}
+
+.nombre_ruta {
+    font-size: 1.25em;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+.footer {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    background-color: rgb(187, 228, 167);
+    border-top: 2px solid rgb(135, 172, 126);
+    padding: 1em 0px 1em 0px
+}
