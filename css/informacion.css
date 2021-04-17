@@ -1,0 +1,24 @@
+.apartado {
+  margin: 5% 15% 5% 15%;
+}
+
+.apartado_galeria {
+  margin: 1em 15% 1em 15%;
+}
+
+.apartado_video {
+  margin: 1em 10% 1em 10%;
+}
+
+.img_galeria, video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+@media (min-width: 550px) {
+  .apartado {
+    margin: 5% 20% 5% 20%;
+  }
+}
+/*# sourceMappingURL=informacion.css.map */

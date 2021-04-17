@@ -1,32 +1,94 @@
-<html>
+<!DOCTYPE html>
 
 <head>
     <title>Cádiz - Senderismo en la naturaleza</title>
     <meta charset="UTF-8">
-
+    <link rel="shortcut icon" href="img/devicon.png" />
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/informacion.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 
-<body>
+<body lang="es">
 
-    <div class="cabecera">
+    <div class=" cabecera page-header text-center">
+
+        <select class="idioma btn" onChange="cambiar_idioma(this)">
+            <option style="background-color: white;" selected value="es">Español</option>
+            <option style="background-color: white;" value="en">English</option>
+        </select>
+
+        <select class="filtro btn" onChange="escala_grises(this)">
+            <option style="background-color: white;" value="color">Color</option>
+            <option style="background-color: white;" value="gray">B/N</option>
+            <option style="background-color: white;" value="prota">Protanopia</option>
+            <option style="background-color: white;" value="deut">Deutanopia</option>
+            <option style="background-color: white;" value="trita">Tritanoptia</option>
+
+        </select>
 
         <h2>Placeholder</h2>
-        <h4>Los mejores destinos de senderismo cuando no sabes dónde ir</h4>
+        <h4 lang="es">Los mejores destinos de senderismo cuando no sabes dónde ir</h4>
+        <h4 lang="en">The best places to go trekking when you doesn't know where to go</h4>
+
+        <div class="reproductor" id="reproductor">
+            <audio id="player" loop>
+                <source src="audio/sound.mp3" type="audio/mp3" />
+            </audio>
+            <img src="https://cdn3.iconfinder.com/data/icons/iconic-1/32/play_alt-512.png" alt="Reproducir"
+                onclick="document.getElementById('player').play() "></img>
+            <img src="https://image.flaticon.com/icons/png/512/64/64594.png" alt="Pausar"
+                onclick="document.getElementById('player').pause() "></img>
+            <img src="https://images.vexels.com/media/users/3/153417/isolated/lists/0565a50b35faf499f9dafb95dd4ef27a-bajar-volumen-icono-plano.png"
+                alt="Bajar volumen" onclick="document.getElementById('player').volume-=0.1"> </img>
+            <img src="https://images.vexels.com/media/users/3/153420/isolated/preview/90566e96e6d42e232515850a0755f61b-volume-up-flat-icon-by-vexels.png"
+                alt="Subir volumen" onclick="document.getElementById('player').volume+=0.1"></img>
+        </div>
 
     </div>
 
-    <div class="sticky menu_dropdown">
+    <div class="position-sticky ruta_dropdown">
 
-        <div class="dropdown">
-            <button class="dropbtn">Rutas</button>
-            <div class="dropdown-content">
-                <a href="rutas_malaga.html">Rutas de Málaga</a>
-                <a>Rutas de Cádiz</a>
-                <a href="rutas_granada.html">Rutas de Granada</a>
-                <a href="rutas_huelva.html">Rutas de Huelva</a>
-                <a href="rutas_jaen.html">Rutas de Jaén</a>
+        <div lang="es" class="dropdown">
+            <a class="dropbutton btn btn-primary nav-link dropdown-toggle" data-toggle="dropdown">Rutas</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item text-center" href="html/rutas_malaga.html"
+                    title="Información rutas de Málaga">Rutas de
+                    Málaga</a>
+                <a class="dropdown-item text-center" href="index.html" title="Información rutas de Cádiz">Rutas de
+                    Cádiz</a>
+                <a class="dropdown-item text-center" href="html/rutas_granada.html"
+                    stitle="Información rutas de Granada">Rutas de
+                    Granada</a>
+                <a class="dropdown-item text-center" href="html/rutas_huelva.html"
+                    title="Información rutas de Huelva">Rutas de
+                    Huelva</a>
+                <a class="dropdown-item text-center" href="html/rutas_jaen.html" title="Información rutas de Jaén">Rutas
+                    de Jaén</a>
+            </div>
+        </div>
+
+        <div lang="en" class="dropdown">
+            <a class="dropbutton btn btn-primary nav-link dropdown-toggle" data-toggle="dropdown">Routes</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item text-center" href="html/rutas_malaga.html"
+                    title="Información rutas de Málaga">Routes in
+                    Málaga</a>
+                <a class="dropdown-item text-center" href="index.html" title="Información rutas de Cádiz">Routes in
+                    Cádiz</a>
+                <a class="dropdown-item text-center" href="html/rutas_granada.html"
+                    stitle="Información rutas de Granada">Routes in
+                    Granada</a>
+                <a class="dropdown-item text-center" href="html/rutas_huelva.html"
+                    title="Información rutas de Huelva">Routes in
+                    Huelva</a>
+                <a class="dropdown-item text-center" href="html/rutas_jaen.html"
+                    title="Información rutas de Jaén">Routes in
+                    de Jaén</a>
             </div>
         </div>
 
@@ -34,34 +96,75 @@
 
     <!-- --------------- Contenido --------------- -->
 
-    <div class="contenido">
+    <div>
 
-        <div class="ruta">
-            <img src="imagenes/pinsapar.jpeg">
+        <div class="apartado">
+            <img alt="Vistas del pinar de Pinasapar" src="img/pinsapar.jpeg">
             <div class="datos_ruta">
                 <p class="nombre_ruta">El Pinsapar</p>
-                <p>Este sendero nos sumerge en el bosque de pinsapos, abeto singular que propició la declaración de
-                    estas sierras como Reserva de la Biosfera y Parque Natural. ¿Por qué tiene tanta importancia este
+                <p lang="es">Este sendero nos sumerge en el bosque de pinsapos, abeto singular que propició la
+                    declaración de
+                    estas sierras como Reserva de la Biosfera y Parque Natural. ¿Por qué tiene tanta importancia
+                    este
                     abeto? Suba al pinsapar y véalo...</p>
+
+                <p lang="en">This trail immerses us in the fir forest, a singular fir that led to the declaration of
+                    these mountains as a Biosphere Reserve and Natural Park. Why is this
+                    fir tree? Go up to the pinsapar and see it ...</p>
             </div>
         </div>
-
-        <div class="ruta">
-            <img src="imagenes/Salto_cabrero6.jpg">
-            <div class="datos_ruta">
-                <p class="nombre_ruta">Salto del cabrero</p>
-                <p>Desde el Puerto del Boyar, llamará nuestra atención este desfiladero con cotas cercanas a los mil
-                    metros, que iremos viendo cada vez más cerca a medida que recorramos este sendero.</p>
-            </div>
-        </div>
-
     </div>
 
-    <div class="footer">
-        <nav>
-            <a>Consejos de seguridad</a> |
-            <a>Preguntas frecuentes</a>
+    <div class="apartado">
+        <img alt="Vistas del desfiladero de Cabrero" src="img/Salto_cabrero6.jpg">
+        <div class="datos_ruta">
+            <p class="nombre_ruta">Salto del cabrero</p>
+            <p lang="es">Desde el Puerto del Boyar, llamará nuestra atención este desfiladero con cotas cercanas a
+                los mil
+                metros, que iremos viendo cada vez más cerca a medida que recorramos este sendero.</p>
+
+            <p lang="en">Desde el Puerto del Boyar, llamará nuestra atención este desfiladero con cotas cercanas a
+                los mil
+                metros, que iremos viendo cada vez más cerca a medida que recorramos este sendero.</p>
+        </div>
+    </div>
+
+
+
+    <footer class=" footer text-center text-lg-start">
+        <nav lang="es">
+            <a href="https://www.privacypolicies.com/live/a0544f29-fe33-4011-aaf6-c3c42d17bec6">Terminos de
+                Uso y
+                Privacidad</a> |
+            <a href="https://www.privacypolicies.com/live/9d700e37-a66c-45e2-bd28-370b4a8cd014">Terminos de
+                Uso de
+                Cookies</a> |
+            <a href="html/informacion.html"> Información </a>
         </nav>
+        <nav lang="en">
+            <a href="https://www.privacypolicies.com/live/a0544f29-fe33-4011-aaf6-c3c42d17bec6">Terms of use and
+                privacity</a> |
+            <a href="https://www.privacypolicies.com/live/9d700e37-a66c-45e2-bd28-370b4a8cd014">Terms of cookie
+                usage</a> |
+            <a href="html/informacion.html"> Information </a>
+        </nav>
+    </footer>
+
+    <script src="scripts/idiomas.js"></script>
+    <script src="scripts/colores.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
     </div>
 
 </body>

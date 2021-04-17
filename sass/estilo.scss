@@ -1,0 +1,129 @@
+
+/* GENERAL */
+
+html {
+  font-size: 22px;
+}
+
+
+body {
+  margin: 0px;
+  background-color: rgb(143, 116, 75);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("../img/jay-mantri-TFyi0QOx08c-unsplash.jpg");
+}
+
+img {
+  height: auto;
+  width: 12em;
+  object-fit: cover;
+}
+
+/* IDIOMA */
+
+.idioma {
+  appearance: none;
+  background-color: #5fb662 !important;
+  border: none !important;
+  outline: none;
+  cursor: pointer;
+
+  > img {
+    width: 1.25em;
+    cursor: pointer;
+  }
+}
+
+body {
+  &[lang=es] [lang]:not([lang=es]), &[lang=en] [lang]:not([lang=en]) {
+    display: none;
+  }
+}
+
+/* CABECERA */
+
+.cabecera {
+  height: auto;
+  background-color: rgb(187, 228, 167);
+  border-bottom: 2px solid rgb(135, 172, 126);
+  padding: 1em 0.5em 1em 0.5em;
+}
+
+/* REPRODUCTOR */
+
+.reproductor > img {
+  width: 1.5em;
+  cursor: pointer;
+}
+
+/* DROPDOWN */
+
+.dropbutton {
+  background-color: #5fb662 !important;
+  color: white;
+  border: none !important;
+  outline: none;
+  cursor: pointer;
+}
+
+.ruta_dropdown {
+  width: 80%;
+  margin: 5% auto;
+  z-index: 99 !important;
+}
+
+.dropdown-item {
+  display: inline-block !important;
+}
+
+/* CONTENIDO */
+
+.apartado {
+  padding: 0.5em 1em 0.5em 1em;
+  margin: 5%;
+  text-align: center;
+  background-color: rgba(146, 223, 146, 0.5);
+
+  > img {
+    width: 75%;
+  }
+}
+
+.nombre_ruta {
+  font-size: 1.25em;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: rgb(187, 228, 167);
+  border-top: 2px solid rgb(135, 172, 126);
+  padding: 1em 0px 1em 0px;
+}
+
+@media (min-width: 550px) {
+  html {
+    font-size: 18px;
+  }
+
+  .dropdown {
+    width: max-content;
+  }
+
+  .ruta_dropdown {
+    width: initial;
+    top: 5%;
+    margin: 1em 0px 0px 5%;
+  }
+
+  .idioma {
+    position: absolute;
+    top: 1em;
+    left: 3%;
+    z-index: 99;
+  }
+}

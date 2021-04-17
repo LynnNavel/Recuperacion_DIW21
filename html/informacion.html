@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Información de utilidad</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../img/devicon.png" />
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/informacion.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body lang="es">
+
+    <div class=" cabecera page-header text-center">
+
+        <select class="idioma btn" onChange="cambiar_idioma(this)">
+            <option style="background-color: white;" selected value="es">Español</option>
+            <option style="background-color: white;" value="en">English</option>
+        </select>
+
+        <select class="filtro btn" onChange="escala_grises(this)">
+            <option style="background-color: white;" value="color">Color</option>
+            <option style="background-color: white;" value="gray">B/N</option>
+            <option style="background-color: white;" value="prota">Protanopia</option>
+            <option style="background-color: white;" value="deut">Deutanopia</option>
+            <option style="background-color: white;" value="trita">Tritanoptia</option>
+
+        </select>
+
+        <h2>Placeholder</h2>
+        <h4 lang="es">Los mejores destinos de senderismo cuando no sabes dónde ir</h4>
+        <h4 lang="en">The best places to go trekking when you doesn't know where to go</h4>
+
+    </div>
+
+    <div class="position-sticky ruta_dropdown">
+
+        <div lang="es" class="dropdown">
+            <a class="dropbutton btn btn-primary nav-link dropdown-toggle" data-toggle="dropdown">Rutas</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item text-center" href="rutas_malaga.html"
+                    title="Información rutas de Málaga">Rutas de
+                    Málaga</a>
+                <a class="dropdown-item text-center" href="../index.html" title="Información rutas de Cádiz">Rutas de
+                    Cádiz</a>
+                <a class="dropdown-item text-center" href="rutas_granada.html"
+                    stitle="Información rutas de Granada">Rutas de
+                    Granada</a>
+                <a class="dropdown-item text-center" href="rutas_huelva.html"
+                    title="Información rutas de Huelva">Rutas de
+                    Huelva</a>
+                <a class="dropdown-item text-center" href="rutas_jaen.html" title="Información rutas de Jaén">Rutas
+                    de Jaén</a>
+            </div>
+        </div>
+
+        <div lang="en" class="dropdown">
+            <a class="dropbutton btn btn-primary nav-link dropdown-toggle" data-toggle="dropdown">Routes</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item text-center" href="html/rutas_malaga.html"
+                    title="Información rutas de Málaga">Routes in
+                    Málaga</a>
+                <a class="dropdown-item text-center" href="index.html" title="Información rutas de Cádiz">Routes in
+                    Cádiz</a>
+                <a class="dropdown-item text-center" href="html/rutas_granada.html"
+                    stitle="Información rutas de Granada">Routes in
+                    Granada</a>
+                <a class="dropdown-item text-center" href="html/rutas_huelva.html"
+                    title="Información rutas de Huelva">Routes in
+                    Huelva</a>
+                <a class="dropdown-item text-center" href="html/rutas_jaen.html"
+                    title="Información rutas de Jaén">Routes in
+                    de Jaén</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- --------------- Contenido --------------- -->
+
+    <div class="">
+
+        <div class="apartado">
+
+            <div class="apartado_video">
+
+                <video class="video-fluid z-depth-1" autoplay loop controls muted>
+                    <source src="../video/consejos.mp4" type="video/mp4" />
+                </video>
+
+            </div>
+
+        </div>
+
+        <div class="apartado">
+
+            <div id="carouselExampleFade" class=" apartado_galeria carousel slide carousel-fade">
+
+                <div class="carrusel_rutas carousel-inner">
+                    <div class="carousel-item active" data-interval="false">
+                        <img src="../img/Colada_de_la_costa.jpg" class="img_galeria d-block" alt="Colada de la Costa">
+                    </div>
+                    <div class="carousel-item" data-interval="false">
+                        <img src="../img/Puente_colgante_de_los_cachorros.jpg" class="img_galeria d-block"
+                            alt="Puente de los Cachorros">
+                    </div>
+                    <div class="carousel-item" data-interval="false">
+                        <img src="../img/rio_borrosa.jpg" class="img_galeria d-block" alt="Río Borrosa">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                    <span style="background-color: black;" class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                    <span style="background-color: black;" class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+    <footer class=" footer text-center text-lg-start">
+        <nav lang="es">
+            <a href="https://www.privacypolicies.com/live/a0544f29-fe33-4011-aaf6-c3c42d17bec6">Terminos de
+                Uso y
+                Privacidad</a> |
+            <a href="https://www.privacypolicies.com/live/9d700e37-a66c-45e2-bd28-370b4a8cd014">Terminos de
+                Uso de
+                Cookies</a> |
+            <a href="html/informacion.html"> Información </a>
+        </nav>
+        <nav lang="en">
+            <a href="https://www.privacypolicies.com/live/a0544f29-fe33-4011-aaf6-c3c42d17bec6">Terms of use and
+                privacity</a> |
+            <a href="https://www.privacypolicies.com/live/9d700e37-a66c-45e2-bd28-370b4a8cd014">Terms of cookie
+                usage</a> |
+            <a href="html/informacion.html"> Information </a>
+        </nav>
+    </footer>
+
+    <script src="../scripts/idiomas.js"></script>
+    <script src="../scripts/colores.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    </div>
+
+</body>
+
+</html>
