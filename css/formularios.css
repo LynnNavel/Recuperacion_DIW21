@@ -1,0 +1,38 @@
+.form_suscripcion {
+    margin-left: 7.5%;
+   margin-right: 7.5%;
+}
+
+.form_suscripcion * {
+    margin:  0.5em auto;
+    display: block;
+}
+
+.form_suscripcion *:not(h3){
+    font-size: 20px;
+}
+
+label, input {
+    display: inline-block;
+    width: 100%;
+}
+
+.form_botones {
+    width: auto;
+    margin: inherit;
+    margin-top: 1em;
+}
+
+@media (min-width: 550px) {
+
+    label, input {
+        display: initial;
+        width: 65%;
+    }
+
+    .form_botones * {
+        display: inline-block;
+        width: auto;
+    }
+
+}

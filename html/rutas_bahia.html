@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Rutas de senderismo en La Bahía</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Rutas senderiasmos">
+    <meta name="keywords" content="routes, rutas, senderismo">
+    <link rel="shortcut icon" href="../img/devicon.png" />
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/informacion.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body lang="es">
+
+    <div class=" cabecera page-header text-center">
+
+        <select class="idioma btn" onChange="cambiar_idioma(this)">
+            <option style="background-color: white;" selected value="es">Español</option>
+            <option style="background-color: white;" value="en">English</option>
+        </select>
+
+        <select class="filtro btn" onChange="escala_grises(this)">
+            <option style="background-color: white;" value="color">Color</option>
+            <option style="background-color: white;" value="gray">B/N</option>
+            <option style="background-color: white;" value="prota">Protanopia</option>
+            <option style="background-color: white;" value="deut">Deutanopia</option>
+            <option style="background-color: white;" value="trita">Tritanoptia</option>
+        </select>
+
+        <h2>Placeholder</h2>
+        <h4 lang="es">Los mejores destinos de senderismo cuando no sabes dónde ir</h4>
+        <h4 lang="en">The best places to go trekking when you doesn't know where to go</h4>
+
+        <div class="reproductor" id="reproductor">
+            <audio id="player" loop>
+                <source src="audio/sound.mp3" type="audio/mp3" />
+            </audio>
+            <img src="https://cdn3.iconfinder.com/data/icons/iconic-1/32/play_alt-512.png" alt="Reproducir"
+                onclick="document.getElementById('player').play() "></img>
+            <img src="https://image.flaticon.com/icons/png/512/64/64594.png" alt="Pausar"
+                onclick="document.getElementById('player').pause() "></img>
+            <img src="https://images.vexels.com/media/users/3/153417/isolated/lists/0565a50b35faf499f9dafb95dd4ef27a-bajar-volumen-icono-plano.png"
+                alt="Bajar volumen" onclick="document.getElementById('player').volume-=0.1"> </img>
+            <img src="https://images.vexels.com/media/users/3/153420/isolated/preview/90566e96e6d42e232515850a0755f61b-volume-up-flat-icon-by-vexels.png"
+                alt="Subir volumen" onclick="document.getElementById('player').volume+=0.1"></img>
+        </div>
+
+    </div>
+
+    <div class="position-sticky ruta_dropdown">
+
+        <div lang="es" class="dropdown">
+            <a class="dropbutton btn btn-primary nav-link dropdown-toggle" data-toggle="dropdown">Rutas</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item text-center" href="rutas_sierra.html"
+                    title="Información rutas por la Sierra">Rutas de la Sierra</a>
+                <a class="dropdown-item text-center" href="../index.html" title="Información rutas de Cádiz">Rutas de
+                    Cádiz</a>
+                <a class="dropdown-item text-center" href="rutas_janda.html"
+                    stitle="Información rutas de La Janda">Rutas de La Janda</a>
+                <a class="dropdown-item text-center" href="rutas_bahia.html" title="Información rutas de la Bahía">Rutas
+                    de la Bahía</a>
+                <a class="dropdown-item text-center" href="rutas_alcornocales.html"
+                    title="Información rutas de los alcornocales">Rutas de los Alcornocales</a>
+            </div>
+        </div>
+
+        <div lang="en" class="dropdown">
+            <a class="dropbutton btn btn-primary nav-link dropdown-toggle" data-toggle="dropdown">Routes</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item text-center" href="rutas_sierra.html" title="Info about routes in Sierra">Routes
+                    in Sierra</a>
+                <a class="dropdown-item text-center" href="../index.html" title="Info about routes in Cádiz">Routes in
+                    Cádiz</a>
+                <a class="dropdown-item text-center" href="rutas_janda.html" stitle="Info about routes in Janda">Routes
+                    in La Janda</a>
+                <a class="dropdown-item text-center" href="rutas_bahia.html" title="Info about routes in Bahía">Routes
+                    in la Bahía</a>
+                <a class="dropdown-item text-center" href="rutas_alcornocales.html"
+                    title="Info about routes in alcornocales">Routes in los Alcornocales</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------- Contenido --------------- -->
+
+    <div>
+        <div class="apartado">
+            <img alt="Vistas del pinar de la bahia" src="../img/Ruta_la_bahia.jpg">
+            <div class="datos_ruta">
+                <p class="nombre_ruta">Senderos con rocas y árboles</p>
+                <p lang="es">El Parque Natural de la Bahía de Cádiz se encuentra en el centro de la costa atlántica de
+                    la provincia de Cádiz. La intrusión del mar y la desembocadura de los ríos Guadalete y San Pedro,
+                    más el clima mediterráneo suave, determinan las características ecológicas y su gran diversidad
+                    paisajística, entre las que encontramos, playas, dunas, lagunas, marismas y esteros.</p>
+                <p lang="en">The Bahía de Cádiz Natural Park is located in the center of the Atlantic coast of the
+                    province of Cádiz. The intrusion of the sea and the mouth of the Guadalete and San Pedro rivers,
+                    plus the mild Mediterranean climate, determine the ecological characteristics and its great
+                    landscape diversity, among which we find beaches, dunes, lagoons, marshes and estuaries.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="apartado">
+        <img alt="Las asombrosas vistas desde puntos elevados" src="../img/senderismo_la_bahia.jpg">
+        <div class="datos_ruta">
+            <p class="nombre_ruta">Vistas panorámicas de la bahía</p>
+            <p lang="es">Una de las mejores formas de conocer este magnífico espacio natural es recorriendo sus
+                senderos. Ya sea a pié o en bicicleta, estas rutas permiten ver el parque en toda su extensión, lo que
+                nos acercará a la fauna y flora existente, edificaciones como los molinos de mareas, salinas y a
+                maravillosos paisajes a 10 minutos del centro de la ciudad. Estos senderos son ideales para los
+                deportistas y amantes de la naturaleza, pudiéndose acceder a zonas de una gran belleza y valor.</p>
+            <p lang="en">One of the best ways to get to know this magnificent natural space is by walking its trails.
+                Either on foot or by bicycle, these routes allow us to see the park in its entirety, which will bring us
+                closer to the existing fauna and flora, buildings such as tide mills, salt flats and wonderful
+                landscapes 10 minutes from the city center. These trails are ideal for athletes and nature lovers, being
+                able to access areas of great beauty and value.</p>
+        </div>
+    </div>
+
+    <div class="apartado">
+        <img alt="Humedad y naturaleza en la había" src="../img/senderismo_la_bahia_3.jpg">
+        <div class="datos_ruta">
+            <p class="nombre_ruta">Humedad y naturaleza en la había</p>
+            <p lang="es">La ruta discurre por un bosque de pinsapos en un camino densamente poblado de vegetación
+                mediterránea que cobija una gran variedad de fauna. Al fondo se puede observar la Sierra del Pinar,
+                donde destaca la silueta de El Torreón, y aún más arriba, el vuelo impecable de los buitres.</p>
+            <p lang="en">The route runs through a fir forest on a path densely populated with Mediterranean vegetation
+                that shelters a great variety of fauna. In the background you can see the Sierra del Pinar, where the
+                silhouette of El Torreón stands out, and even higher up, the impeccable flight of the vultures.</p>
+        </div>
+    </div>
+
+
+    <footer class=" footer text-center text-lg-start">
+        <nav lang="es">
+            <a href="https://www.privacypolicies.com/live/a0544f29-fe33-4011-aaf6-c3c42d17bec6"
+                title="Terminos de uso y privacidad de Placeholder senderismo">Terminos de
+                Uso y Privacidad</a> |
+            <a href="https://www.privacypolicies.com/live/9d700e37-a66c-45e2-bd28-370b4a8cd014"
+                title="Terminos de uso de cookies de Placeholder senderismo">Terminos de
+                Uso de Cookies</a> |
+            <a href="informacion.html"
+                title="Otra información de utilidad para aquellos que quieran iniciarse en el senderismo">
+                Información</a>
+        </nav>
+        <nav lang="en">
+            <a href="https://www.privacypolicies.com/live/a0544f29-fe33-4011-aaf6-c3c42d17bec6"
+                title="Terms of use and privacity">Terms of use and privacity</a> |
+            <a href="https://www.privacypolicies.com/live/9d700e37-a66c-45e2-bd28-370b4a8cd014"
+                title="Tems of cookies">Terms of cookie usage</a> |
+            <a href="informacion.html" title="more info"> Information </a>
+        </nav>
+    </footer>
+
+    <script src="../scripts/idiomas.js"></script>
+    <script src="../scripts/colores.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Rutas de senderismo en los Alcornocales</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Rutas senderiasmos">
+    <meta name="keywords" content="routes, rutas, senderismo">
+    <link rel="shortcut icon" href="../img/devicon.png" />
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/informacion.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body lang="es">
+
+    <div class=" cabecera page-header text-center">
+
+        <select class="idioma btn" onChange="cambiar_idioma(this)">
+            <option style="background-color: white;" selected value="es">Español</option>
+            <option style="background-color: white;" value="en">English</option>
+        </select>
+
+        <select class="filtro btn" onChange="escala_grises(this)">
+            <option style="background-color: white;" value="color">Color</option>
+            <option style="background-color: white;" value="gray">B/N</option>
+            <option style="background-color: white;" value="prota">Protanopia</option>
+            <option style="background-color: white;" value="deut">Deutanopia</option>
+            <option style="background-color: white;" value="trita">Tritanoptia</option>
+        </select>
+
+        <h2>Placeholder</h2>
+        <h4 lang="es">Los mejores destinos de senderismo cuando no sabes dónde ir</h4>
+        <h4 lang="en">The best places to go trekking when you doesn't know where to go</h4>
+
+        <div class="reproductor" id="reproductor">
+            <audio id="player" loop>
+                <source src="audio/sound.mp3" type="audio/mp3" />
+            </audio>
+            <img src="https://cdn3.iconfinder.com/data/icons/iconic-1/32/play_alt-512.png" alt="Reproducir"
+                onclick="document.getElementById('player').play() "></img>
+            <img src="https://image.flaticon.com/icons/png/512/64/64594.png" alt="Pausar"
+                onclick="document.getElementById('player').pause() "></img>
+            <img src="https://images.vexels.com/media/users/3/153417/isolated/lists/0565a50b35faf499f9dafb95dd4ef27a-bajar-volumen-icono-plano.png"
+                alt="Bajar volumen" onclick="document.getElementById('player').volume-=0.1"> </img>
+            <img src="https://images.vexels.com/media/users/3/153420/isolated/preview/90566e96e6d42e232515850a0755f61b-volume-up-flat-icon-by-vexels.png"
+                alt="Subir volumen" onclick="document.getElementById('player').volume+=0.1"></img>
+        </div>
+
+    </div>
+
+    <div class="position-sticky ruta_dropdown">
+
+        <div lang="es" class="dropdown">
+            <a class="dropbutton btn btn-primary nav-link dropdown-toggle" data-toggle="dropdown">Rutas</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item text-center" href="rutas_sierra.html"
+                    title="Información rutas por la Sierra">Rutas de la Sierra</a>
+                <a class="dropdown-item text-center" href="../index.html" title="Información rutas de Cádiz">Rutas de
+                    Cádiz</a>
+                <a class="dropdown-item text-center" href="rutas_janda.html"
+                    stitle="Información rutas de La Janda">Rutas de La Janda</a>
+                <a class="dropdown-item text-center" href="rutas_bahia.html" title="Información rutas de la Bahía">Rutas
+                    de la Bahía</a>
+                <a class="dropdown-item text-center" href="rutas_alcornocales.html"
+                    title="Información rutas de los alcornocales">Rutas de los Alcornocales</a>
+            </div>
+        </div>
+
+        <div lang="en" class="dropdown">
+            <a class="dropbutton btn btn-primary nav-link dropdown-toggle" data-toggle="dropdown">Routes</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item text-center" href="rutas_sierra.html" title="Info about routes in Sierra">Routes
+                    in Sierra</a>
+                <a class="dropdown-item text-center" href="../index.html" title="Info about routes in Cádiz">Routes in
+                    Cádiz</a>
+                <a class="dropdown-item text-center" href="rutas_janda.html" stitle="Info about routes in Janda">Routes
+                    in La Janda</a>
+                <a class="dropdown-item text-center" href="rutas_bahia.html" title="Info about routes in Bahía">Routes
+                    in la Bahía</a>
+                <a class="dropdown-item text-center" href="rutas_alcornocales.html"
+                    title="Info about routes in alcornocales">Routes in los Alcornocales</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------- Contenido --------------- -->
+
+    <div>
+        <div class="apartado">
+            <img alt="Las estructuras enconrtadas en los arcornocales" src="../img/senderismo_en_alcornocales.jpg">
+            <div class="datos_ruta">
+                <p class="nombre_ruta">Estructuras de piedra</p>
+                <p lang="es">Situado en la provincia de Cádiz y parte de Málaga, se extiende desde la sierra hasta el
+                    joven Parque Natural del Estrecho, presentando gran diversidad de relieves y paisajes. Esta riqueza
+                    se refleja en todos los ámbitos: flora, fauna, climatología, historia y folklore, constituyendo un
+                    lugar ideal para visitar y disfrutar de actividades tan diversas como la recolección de setas y la
+                    práctica de deportes en la naturaleza...</p>
+                <p lang="en">Located in the province of Cádiz and part of Malaga, it extends from the mountains to the
+                    young Natural Park of the Strait, presenting a great diversity of reliefs and landscapes. This
+                    wealth is reflected in all areas: flora, fauna, weather, history and folklore, constituting an ideal
+                    place to visit and enjoy activities as diverse as mushroom picking and sports in nature....</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="apartado">
+        <img alt="Las distintas zonas rocosas" src="../img/senderismo_en_alcornocales_2.jpg">
+        <div class="datos_ruta">
+            <p class="nombre_ruta">Zonas rocosas</p>
+            <p lang="es">En un parque tan completo y diverso, caben otras actividades, que van del montañismo en el pico
+                del Aljibe o el Picacho; la espeleología en el enclave Ramblazo-Motillas, o el descenso de cañones en La
+                Garganta de Buitreras, una de las pocas áreas preparadas para esta práctica de riesgo y que por su
+                singularidad ha sido declarada monumento natural. Para los más tradicionales se recomiendan las rutas a
+                caballo, como las establecidas en La Almoraima...</p>
+            <p lang="en">In such a complete and diverse park, there are other activities, ranging from mountaineering to
+                the peak of the Aljibe or the Picacho; speleology in the Ramblazo-Motillas enclave, or the descent of
+                canyons in La Garganta de Buitreras, one of the few areas prepared for this risky practice and which due
+                to its uniqueness has been declared a natural monument. For the more traditional, the routes on
+                horseback are recommended, such as those established in La Almoraima...</p>
+        </div>
+    </div>
+
+    <div class="apartado">
+        <img alt="Senderos naturales y húmedos de los alcornocales" src="../img/senderismo_en_alcornocales_3.jpg">
+        <div class="datos_ruta">
+            <p class="nombre_ruta">Zonas rocosas</p>
+            <p lang="es">Suelo, humedad y aprovechamiento tradicional han sido los factores determinantes para mantener
+                la mayor masa conservada y productiva de alcornocal de la Península Ibérica, el parque natural Los
+                Alcornocales. </p>
+            <p lang="en">Soil, humidity and traditional use have been the determining factors to maintain the largest
+                conserved and productive mass of cork oak forest in the Iberian Peninsula, the Los Alcornocales natural
+                park.</p>
+        </div>
+    </div>
+
+
+    <footer class=" footer text-center text-lg-start">
+        <nav lang="es">
+            <a href="https://www.privacypolicies.com/live/a0544f29-fe33-4011-aaf6-c3c42d17bec6"
+                title="Terminos de uso y privacidad de Placeholder senderismo">Terminos de
+                Uso y Privacidad</a> |
+            <a href="https://www.privacypolicies.com/live/9d700e37-a66c-45e2-bd28-370b4a8cd014"
+                title="Terminos de uso de cookies de Placeholder senderismo">Terminos de
+                Uso de Cookies</a> |
+            <a href="informacion.html"
+                title="Otra información de utilidad para aquellos que quieran iniciarse en el senderismo">
+                Información</a>
+        </nav>
+        <nav lang="en">
+            <a href="https://www.privacypolicies.com/live/a0544f29-fe33-4011-aaf6-c3c42d17bec6"
+                title="Terms of use and privacity">Terms of use and privacity</a> |
+            <a href="https://www.privacypolicies.com/live/9d700e37-a66c-45e2-bd28-370b4a8cd014"
+                title="Tems of cookies">Terms of cookie usage</a> |
+            <a href="informacion.html" title="more info"> Information </a>
+        </nav>
+    </footer>
+
+    <script src="../scripts/idiomas.js"></script>
+    <script src="../scripts/colores.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    </div>
+</body>
+
+</html>

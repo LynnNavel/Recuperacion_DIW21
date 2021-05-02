@@ -73,6 +73,28 @@ body[lang=es] [lang]:not([lang=es]), body[lang=en] [lang]:not([lang=en]) {
   display: inline-block !important;
 }
 
+/* BANNER JOIN US / UNETE A NSOTROS */
+
+.joinus {
+  margin: 0px 10%;
+  text-align: center;
+  background-color: #bbe4a7;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.joinus:hover {
+  cursor: pointer;
+}
+
+.titulo_joinus {
+  font-size: 2.5em;
+}
+
+.subtitulo_joinus {
+  font-style: italic;
+}
+
 /* CONTENIDO */
 .apartado {
   padding: 0.5em 1em 0.5em 1em;
@@ -126,6 +148,10 @@ body[lang=es] [lang]:not([lang=es]), body[lang=en] [lang]:not([lang=en]) {
 
   .filtro {
     right: 3%;
+  }
+
+  .joinus {
+    margin: 0px 30%;
   }
 }
 /*# sourceMappingURL=estilo.css.map */

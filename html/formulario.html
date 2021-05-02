@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Registro</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Rutas senderiasmos">
+    <meta name="keywords" content="routes, rutas, senderismo">
+    <link rel="shortcut icon" href="../img/devicon.png" />
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/informacion.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body lang="es">
+
+    <div class=" cabecera page-header text-center">
+
+        <select class="idioma btn" onChange="cambiar_idioma(this)">
+            <option style="background-color: white;" selected value="es">Español</option>
+            <option style="background-color: white;" value="en">English</option>
+        </select>
+
+        <select class="filtro btn" onChange="escala_grises(this)">
+            <option style="background-color: white;" value="color">Color</option>
+            <option style="background-color: white;" value="gray">B/N</option>
+            <option style="background-color: white;" value="prota">Protanopia</option>
+            <option style="background-color: white;" value="deut">Deutanopia</option>
+            <option style="background-color: white;" value="trita">Tritanoptia</option>
+        </select>
+
+        <h2>Placeholder</h2>
+        <h4 lang="es">Los mejores destinos de senderismo cuando no sabes dónde ir</h4>
+        <h4 lang="en">The best places to go trekking when you doesn't know where to go</h4>
+
+        <div class="reproductor" id="reproductor">
+            <audio id="player" loop>
+                <source src="audio/sound.mp3" type="audio/mp3" />
+            </audio>
+            <img src="https://cdn3.iconfinder.com/data/icons/iconic-1/32/play_alt-512.png" alt="Reproducir"
+                onclick="document.getElementById('player').play() "></img>
+            <img src="https://image.flaticon.com/icons/png/512/64/64594.png" alt="Pausar"
+                onclick="document.getElementById('player').pause() "></img>
+            <img src="https://images.vexels.com/media/users/3/153417/isolated/lists/0565a50b35faf499f9dafb95dd4ef27a-bajar-volumen-icono-plano.png"
+                alt="Bajar volumen" onclick="document.getElementById('player').volume-=0.1"> </img>
+            <img src="https://images.vexels.com/media/users/3/153420/isolated/preview/90566e96e6d42e232515850a0755f61b-volume-up-flat-icon-by-vexels.png"
+                alt="Subir volumen" onclick="document.getElementById('player').volume+=0.1"></img>
+        </div>
+
+    </div>
+
+    <div class="position-sticky ruta_dropdown">
+
+        <div lang="es" class="dropdown">
+            <a class="dropbutton btn btn-primary nav-link dropdown-toggle" data-toggle="dropdown">Rutas</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item text-center" href="rutas_sierra.html"
+                    title="Información rutas por la Sierra">Rutas de la Sierra</a>
+                <a class="dropdown-item text-center" href="../index.html" title="Información rutas de Cádiz">Rutas de
+                    Cádiz</a>
+                <a class="dropdown-item text-center" href="rutas_janda.html"
+                    stitle="Información rutas de La Janda">Rutas de La Janda</a>
+                <a class="dropdown-item text-center" href="rutas_bahia.html" title="Información rutas de la Bahía">Rutas
+                    de la Bahía</a>
+                <a class="dropdown-item text-center" href="rutas_alcornocales.html"
+                    title="Información rutas de los alcornocales">Rutas de los Alcornocales</a>
+            </div>
+        </div>
+
+        <div lang="en" class="dropdown">
+            <a class="dropbutton btn btn-primary nav-link dropdown-toggle" data-toggle="dropdown">Routes</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item text-center" href="rutas_sierra.html" title="Info about routes in Sierra">Routes
+                    in Sierra</a>
+                <a class="dropdown-item text-center" href="../index.html" title="Info about routes in Cádiz">Routes in
+                    Cádiz</a>
+                <a class="dropdown-item text-center" href="rutas_janda.html" stitle="Info about routes in Janda">Routes
+                    in La Janda</a>
+                <a class="dropdown-item text-center" href="rutas_bahia.html" title="Info about routes in Bahía">Routes
+                    in la Bahía</a>
+                <a class="dropdown-item text-center" href="rutas_alcornocales.html"
+                    title="Info about routes in alcornocales">Routes in los Alcornocales</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------- Contenido --------------- -->
+
+    <div>
+        <div class="apartado">
+            <form class="form_suscripcion"  onsubmit="alert('Se han registrado los datos')">
+                <h3>Suscripción</h3>
+                <label lang="es" for="nombre">Nombre</label>
+                <label lang="en" for="nombre">Name</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Pepe" minlength="1" required />
+                </br>
+                <label lang="es" for="apellido">Apellidos</label>
+                <label lang="en" for="apellido">Last name</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ramos" minlength="1" required />
+                </br>
+                <label lang="es" for="dni">Documento</label>
+                <label lang="en" for="dni">ID card number</label>
+                <input type="text" name="dni" id="dni" placeholder="12345678A" minlength="9" required pattern="^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$">
+                <br/>
+                <label lang="es" for="email">Correo electrónico </label>
+                <label lang="en" for="email">Email </label>
+                <input type="email" id="email" name="email" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$"
+                placeholder="abc@gmail.com" required /> 
+                </br>
+                <label lang="es" for="direccion">Dirección</label>
+                <label lang="en" for="direccion">Address</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Calle random" minlength="1" required />
+                </br>
+                <label lang="es" for="telefono">Teléfono de contacto</label>
+                <label lang="en" for="telefono">Phone number</label> 
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}"
+                placeholder="123-45-67-89" required />
+                </br>
+                <div class="form_botones">
+                    <input lang="es" type="submit" value="Enviar">
+                    <input lang="es" type="reset" value="Borrar todo">
+                    <input lang="en" type="submit" value="Submit">
+                    <input lang="en" type="reset" value="Clear form">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class=" footer text-center text-lg-start">
+        <nav lang="es">
+            <a href="https://www.privacypolicies.com/live/a0544f29-fe33-4011-aaf6-c3c42d17bec6"
+                title="Terminos de uso y privacidad de Placeholder senderismo">Terminos de
+                Uso y Privacidad</a> |
+            <a href="https://www.privacypolicies.com/live/9d700e37-a66c-45e2-bd28-370b4a8cd014"
+                title="Terminos de uso de cookies de Placeholder senderismo">Terminos de
+                Uso de Cookies</a> |
+            <a href="informacion.html"
+                title="Otra información de utilidad para aquellos que quieran iniciarse en el senderismo">
+                Información</a>
+        </nav>
+        <nav lang="en">
+            <a href="https://www.privacypolicies.com/live/a0544f29-fe33-4011-aaf6-c3c42d17bec6"
+                title="Terms of use and privacity">Terms of use and privacity</a> |
+            <a href="https://www.privacypolicies.com/live/9d700e37-a66c-45e2-bd28-370b4a8cd014"
+                title="Tems of cookies">Terms of cookie usage</a> |
+            <a href="informacion.html" title="more info"> Information </a>
+        </nav>
+    </footer>
+
+    <script src="../scripts/idiomas.js"></script>
+    <script src="../scripts/colores.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    </div>
+</body>
+
+</html>
