@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Registro</title>
+    <title>Reserva de ruta</title>
     <meta charset="UTF-8">
     <meta name="description" content="Rutas senderiasmos">
     <meta name="keywords" content="routes, rutas, senderismo">
     <link rel="shortcut icon" href="../img/devicon.png" />
     <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="stylesheet" href="../css/formularios.css">
     <link rel="stylesheet" href="../css/informacion.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/calendario.css">
+    <link rel="stylesheet" href="../css/reservar.css">
 
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -91,44 +93,66 @@
     <!-- --------------- Contenido --------------- -->
 
     <div>
+
         <div class="apartado">
-            <form class="form_suscripcion"  onsubmit="alert('Se han registrado los datos')">
-                <h3 lang="es">Suscripción</h3>
-                <h3 lang="en">Join Us</h3>
-                <label lang="es" for="nombre">Nombre</label>
-                <label lang="en" for="nombre">Name</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Pepe" minlength="1" required />
-                </br>
-                <label lang="es" for="apellido">Apellidos</label>
-                <label lang="en" for="apellido">Last name</label>
-                <input type="text" id="apellido" name="apellido" placeholder="Ramos" minlength="1" required />
-                </br>
-                <label lang="es" for="dni">Documento</label>
-                <label lang="en" for="dni">ID card</label>
-                <input type="text" name="dni" id="dni" placeholder="12345678A" minlength="9" required pattern="^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$">
-                <br/>
-                <label lang="es" for="email">Correo electrónico </label>
-                <label lang="en" for="email">Email </label>
-                <input type="email" id="email" name="email" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,4}$"
-                placeholder="abc@gmail.com" required /> 
-                </br>
-                <label lang="es" for="direccion">Dirección</label>
-                <label lang="en" for="direccion">Address</label>
-                <input type="text" id="direccion" name="direccion" placeholder="Calle random" minlength="1" required />
-                </br>
-                <label lang="es" for="telefono">Teléfono de contacto</label>
-                <label lang="en" for="telefono">Phone number</label> 
-                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}"
-                placeholder="123-45-67-89" required />
-                </br>
-                <div class="form_botones">
-                    <input lang="es" type="submit" value="Enviar">
-                    <input lang="es" type="reset" value="Borrar todo">
-                    <input lang="en" type="submit" value="Submit">
-                    <input lang="en" type="reset" value="Clear form">
+
+            <div id="calendar_container" class="light">
+
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <span class="month-picker" id="month-picker">February</span>
+                        <div class="year-picker">
+                            <span class="year-change" id="prev-year">
+                                <span style="background-color: #5fb662;" class="carousel-control-prev-icon"
+                                    aria-hidden="true"></span>
+                            </span>
+                            <span id="year">2021</span>
+                            <span class="year-change" id="next-year">
+                                <span style="background-color: #5fb662;" class="carousel-control-next-icon"
+                                    aria-hidden="true"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="calendar-body">
+                        <div class="calendar-week-day">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="calendar-days"></div>
+                    </div>
+                    <div class="calendar-footer">
+                        <div class="toggle">
+                            <span>Dark Mode</span>
+                            <div class="dark-mode-switch">
+                                <div class="dark-mode-switch-ident"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="month-list"></div>
                 </div>
+            </div>
+
+            <form class="formulario_reserva">
+                <label for="fecha">Fecha seleccionada: <span id="fecha_elegida">ninguna</span></label>
+                <input id="fecha" type="hidden" name="fecha" required>
+                <label for="ruta">Ruta deseada:</label>
+                <select id="lista_rutas">
+                    <option value="pinsapar">El Pinsapar</option>
+                    <option value="salto_cabrero">El Salto del Cabrero</option>
+                    <option value="alcornoque">Ruta de los Alcornocales</option>
+                    <option value="bahia"> Ruta por la Bahía</option>
+                    <option value="alcala">Ruta por Alcalá</option>
+                    <option value="medina">Ruta por Medina-Sidonia</option>
+                </select>
+                <input type="button" value="Reservar" onclick="reservar()">
             </form>
         </div>
+
     </div>
 
     <footer class=" footer text-center text-lg-start">
@@ -154,6 +178,7 @@
 
     <script src="../scripts/idiomas.js"></script>
     <script src="../scripts/colores.js"></script>
+    <script src="../scripts/calendario.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
