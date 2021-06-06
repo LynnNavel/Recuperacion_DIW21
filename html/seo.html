@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Cádiz - Senderismo en la naturaleza</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Rutas senderiasmos">
+    <meta name="keywords" content="routes, rutas, senderismo">
+    <link rel="shortcut icon" href="../img/devicon.png" />
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/informacion.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body lang="es">
+
+    <div class=" cabecera page-header text-center">
+
+        <select class="idioma btn" onChange="cambiar_idioma(this)">
+            <option style="background-color: white;" selected value="es">Español</option>
+            <option style="background-color: white;" value="en">English</option>
+        </select>
+
+        <select class="filtro btn" onChange="escala_grises(this)">
+            <option style="background-color: white;" value="color">Color</option>
+            <option style="background-color: white;" value="gray">B/N</option>
+            <option style="background-color: white;" value="prota">Protanopia</option>
+            <option style="background-color: white;" value="deut">Deutanopia</option>
+            <option style="background-color: white;" value="trita">Tritanoptia</option>
+
+        </select>
+
+        <h2>Placeholder</h2>
+        <h4 lang="es">Los mejores destinos de senderismo cuando no sabes dónde ir</h4>
+        <h4 lang="en">The best places to go trekking when you doesn't know where to go</h4>
+
+        <div class="reproductor" id="reproductor">
+            <audio id="player" loop>
+                <source src="../audio/sound.mp3" type="audio/mp3" />
+            </audio>
+            <img src="https://cdn3.iconfinder.com/data/icons/iconic-1/32/play_alt-512.png" alt="Reproducir"
+                onclick="document.getElementById('player').play() "></img>
+            <img src="https://image.flaticon.com/icons/png/512/64/64594.png" alt="Pausar"
+                onclick="document.getElementById('player').pause() "></img>
+            <img src="https://images.vexels.com/media/users/3/153417/isolated/lists/0565a50b35faf499f9dafb95dd4ef27a-bajar-volumen-icono-plano.png"
+                alt="Bajar volumen" onclick="document.getElementById('player').volume-=0.1"> </img>
+            <img src="https://images.vexels.com/media/users/3/153420/isolated/preview/90566e96e6d42e232515850a0755f61b-volume-up-flat-icon-by-vexels.png"
+                alt="Subir volumen" onclick="document.getElementById('player').volume+=0.1"></img>
+        </div>
+
+    </div>
+
+    <div class="position-sticky ruta_dropdown">
+
+        <div lang="es" class="dropdown">
+            <a class="dropbutton btn btn-primary nav-link dropdown-toggle" data-toggle="dropdown">Rutas</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item text-center" href="rutas_sierra.html"
+                    title="Información rutas por la Sierra">Rutas de la Sierra</a>
+                <a class="dropdown-item text-center" href="../index.html" title="Información rutas de Cádiz">Rutas de
+                    Cádiz</a>
+                <a class="dropdown-item text-center" href="rutas_janda.html"
+                    stitle="Información rutas de La Janda">Rutas de
+                    La Janda</a>
+                <a class="dropdown-item text-center" href="rutas_bahia.html" title="Información rutas de la Bahía">Rutas
+                    de
+                    la Bahía</a>
+                <a class="dropdown-item text-center" href="rutas_alcornocales.html"
+                    title="Información rutas de los alcornocales">Rutas
+                    de los Alcornocales</a>
+            </div>
+        </div>
+
+        <div lang="en" class="dropdown">
+            <a class="dropbutton btn btn-primary nav-link dropdown-toggle" data-toggle="dropdown">Routes</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item text-center" href="rutas_sierra.html" title="Info about routes in Sierra">Routes
+                    in Sierra</a>
+                <a class="dropdown-item text-center" href="../index.html" title="Info about routes in Cádiz">Routes in
+                    Cádiz</a>
+                <a class="dropdown-item text-center" href="rutas_janda.html" stitle="Info about routes in Janda">Routes
+                    in
+                    La Janda</a>
+                <a class="dropdown-item text-center" href="rutas_bahia.html" title="Info about routes in Bahía">Routes
+                    in
+                    la Bahía</a>
+                <a class="dropdown-item text-center" href="rutas_alcornocales.html"
+                    title="Info about routes in alcornocales">Routes in
+                    los Alcornocales</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- --------------- Contenido --------------- -->
+
+    <div class="apartado">
+        <h2>Documencion SEO</h2>
+        <h4>Configuración del sitio</h4>
+        <p>
+            En primer lugar, se ha tenido en cuenta (dentro del margen de que esta pagina es un caso practico y no
+            tenemos competencia),
+            las palabras claves a utilizar (al ser un ejemplo, solo se han elegido 3 en lugar de las recomendadas),
+            estas son "senderismo",
+            "rutas" y "routes"
+        </p>
+        <p>
+            Al no tener texto reales, en algunos casos se ha usado textos generados (lorem ipsum) por lo cual no se le
+            ha añadido palabras en negritas,
+            se ha intentado mantener la estética de "blog" y por tanto se ha respetado los titulos de cada ruta.
+        </p>
+        <p>
+            Los metas utilizados son "descripcion"(para indicar de que trata la pagina), "charset"(para indicar set de
+            caracteres a utilizar)
+            y "keywords"(para las palabras clave que nos darían el posicionamiento en google)
+        </p>
+        <p>
+            Este proyecto solo tiene dos url externas (politicas de privacidad y de cookies) que no son amigables ya que
+            no son de mi propiedad y por tanto no he podido mediar en el tema.
+            Al no tener un dominio activo, no tenemos ninguna otra URL.
+        </p>
+        <p>
+            La pagina no consta de transcripcion de audio a texto ya que solo tiene dos contenidos sonoros:
+            El audio principal que solo son sonidos de la naturaleza y pajaros cantando, que no es relevante en la
+            experiencia del usuario.<br />
+            El video de la pagina "informacion", que cuenta con subtitulos propios.
+        </p>
+        <p>
+            El favicon a utilizar durante toda la pagina es un icono de una silueta de una persona realizando senderismo
+            y se utiliza en todas los html del proyecto.
+        </p>
+        <img src="../img/devicon.png" title="FavIcon de la pagina" alt="FavIcon de la pagina" />
+        <h4>Imagenes</h4>
+        <p>
+            Todas las imagenes utilizas tienen su titulo y alt para en el caso de que fallara la imagen o alguien use un
+            navegador con lector, pueda saber de que trata la imagen.
+        </p>
+        <p>
+            No se ha especificado un tamaño exacto de las imagenes ya que toda la pagina esta planteada Mobile-first y
+            se ha ido
+            reescalando para poder adaptarse a la pantalla del usuario.
+        </p>
+        <p>
+            Tampoco se ha optimizado las imagenes a utlizar ya que al tratarse de un ejemplo, no tienen demasiada
+            calidad ni hay demasiada cantidad
+            por lo que no ha sido necesario reformatearlas a webp ni acciones similares.
+        </p>
+        <h4>Enlaces y contenido duplicado</h4>
+        <p>
+            Esta pagina solo cuenta con 2 links externos y 9 internos, los externos funcionan sin problemas y se ha
+            comprobado su funcionamiento en
+            cada uno de los html. Se realizan las mismas comprobaciones para los internos.
+        </p>
+        <p>
+            Los textos no son originales, ya que como se ha comentado antes, esto es una practica y no una web real, por
+            lo que no dispone de mucho contenido real.
+            Al no tener mucho contenido, se han dejado los meta y descripciones iguales, a la espera de si se añadiera
+            mas contenido, cambiarlo.
+        </p>
+        <p>
+            El diseño para movil, tablet y web es similar ya que se empezó desde el principio del proyecto para
+            dispositivos moviles (que suele ser lo mas complicado de reescalar)
+            y conforme se iba avanzando, se iban añadiendo los @media para aumentar los espacios entre los textos y
+            conservar en lo maximo posible la estetica y el diseño.
+        </p>
+
+        <h4>Evitar penalizaciones de Google</h4>
+        <p>
+            Este proyecto, a pesar de que no se debe, utiliza textos ocultos, ya que no contamos con las ventajas de
+            tener un servidor (por ejemplo tener informacion del idioma del usuario)
+            pero esto, al momento de desplegarlo, se solventaria.
+        </p>
+        <h4>Reduce el tiempo de carga de tu pagina</h4>
+        <p>
+            De forma local, la pagina funciona bien dentro de los margenes estudiados en clase. Sin embargo no se ha
+            podido probar en un dominio
+        </p>
+        <p>
+            Se ha intentado hacer el menor uso posible de javascript y de css y de reutilizar todo lo posible y de
+            hacerlo externo.
+        </p>
+
+    </div>
+
+    <div class="apartado">
+        <h2>Usabilidad</h2>
+        <h4>Visibilidad del estado del sistema</h4>
+        <p>
+            Esta pagina web no tiene tiempos de carga ni sistema de compras, solo posee dos formularios y ambos, al
+            rellenarlo, muestran al usuario, las opciones elegidas (ya que esto es solo una practica, no tiene
+            funcionalidad mas allá de la mera información y comprobación del funcionamiento del formulario)
+        </p>
+        <h4>Relación entre el sistema y el mundo real</h4>
+        <p>
+            No se utiliza el lenguaje "usuario" ya que carece de contenido real, pero en las rutas que a modo de
+            ejemplo, si tienen texto real, no usan un lenguaje complejo o técnico.
+        </p>
+        <p>
+            Las imagenes son de paisajes, por lo que (en mi criterio) no serian confusas al usuario y no darían pie a
+            equivocaciones (y de ser asi, estas cuentan con titulos y alts para poder subsanar estos errores).
+        </p>
+        <h4>Control y libertad del usuario</h4>
+        <p>
+            El usuario tiene pleno control de la pagina, solo puede introducir datos en dos formularios (reserva de
+            citas y registro).
+            En ambos, en caso de error (por ejemplo escribir mal su DNI), se le notifica y permite su edicion.
+            En el formulario de registro se inlcuye un boton de eliminar todos los campos de texto introducidos con
+            anterioridad.
+        </p>
+        <h4>Consistencia y estandares</h4>
+        <p>
+            Este proyecto, ha intentado usar los minimos estandares de color para evitar problemas con las personas
+            daltonicas.
+            Sin embargo, en el calendario si se ha utilizado el rojo a modo de "dia no disponible"(y para personas que
+            no distingan el color, pueden usar el filtro para las diferentes tipos de daltonías, y en el caso de que no
+            lo usen, ven una alerta que les avisa que el dia no esta disponible)
+        </p>
+        <p>
+            La pagina, al estar pensada Mobile-first, no tiene problemas de mover menús o necesitar un icono para reducirlo.
+        </p>
+        <h4>Prevención de errores</h4>
+        <p>
+            El usuario solo puede cometer errores en los formularios y todos los campos tienen control, a traves de patterns,en caso de haber error, se le avisa al usuario para que pueda editarlo.
+        </p>
+        <h4>Diseño minimalista</h4>
+        <p>
+            El diseño de la pagina es minimalista y lo mas simple posible para que el usuario no se sienta abrumado con demasiados elementos en la pantalla.
+        </p>
+    </div>
+    <div class="apartado">
+        <h2>Usabilidad</h2>
+        <h3>En este proyecto, se ha intentado cumplir dentro de las posibilidades, cumplir con las normas WCAG de accesibilidad para contar con, al menos una certificación A.</h3>
+        <h4>Perceptible</h4>
+        <p>
+            Todo el contenido de la pagina, tiene textos alternativos para las personas que usan un navegador con lector,
+        </p>
+        <p>
+            Los contenidos multimedia del proyecto son el video (Que cuenta de por si con sus propios subtitulos) y el sonido del reproductor (sonidos ambientales que no son necesarios para la experiencia de la navegacion).
+        </p>
+        <p>
+            El contenido de la pagina web es adaptable a todos los dispositivos y aunque no ha sido probado, deberia de ser posible su lectura con navegadores que lean el contenido.
+        </p>
+        <p>
+            El contenido esta claramente separado para que el usuario no confunda dos rutas por ejemplo. La informacion principal es el texto y tiene una fuerte presencia frente a la informacion secundaria (fotos, sonido ambiental....)
+        </p>
+       <h4>Operable</h4>
+       <p>
+           La navegación por la pagina y uso de la misma es compatible con el teclado.
+       </p>
+       <p>
+           El proyecto ha eliminado todas las restricciones de tiempo, para que los usuarios puedan navegar con tranquilidad por la web sin tener que preocuparse por su velocidad de lectura....
+       </p>
+       <p>
+           Esta pagina no tiene ningun tipo de contenido que cambie la luminosidad o causar destellos en la pantalla.
+       </p>
+       <h4>Comprensible</h4>
+       <p>
+           El texto es legible (es de gran tamaño para eso) y no es muy complejo (en las rutas que hay texto real), es decir, no incluye ningun tecnicismo ni nada que sea dificil de comprender para ningun usuario.
+       </p>
+       <p>
+            La web es predecible, no cambia el formato en ningun momento y en todo momento se puede tener toda la pantalla en la vista (gracias al responsive y el Mobile-first).
+       </p>
+       <p>
+           El usuario no tiene muchos sitios donde poner datos y por tanto no hay muchos posibles errores, sin embargo, los formularios (donde si pueden/deben meter datos) contienen patterns y en el caso de que no coincida, se les muestra un alert para que puedan modificar el campo.
+       </p>
+    </div>
+
+
+    <footer class=" footer text-center text-lg-start">
+        <nav lang="es">
+            <a href="https://www.privacypolicies.com/live/a0544f29-fe33-4011-aaf6-c3c42d17bec6"
+                title="Terminos de uso y privacidad de Placeholder senderismo">Terminos de
+                Uso y
+                Privacidad</a> |
+            <a href="https://www.privacypolicies.com/live/9d700e37-a66c-45e2-bd28-370b4a8cd014"
+                title="Terminos de uso de cookies de Placeholder senderismo">Terminos de
+                Uso de
+                Cookies</a> |
+            <a href="informacion.html"
+                title="Otra información de utilidad para aquellos que quieran iniciarse en el senderismo"> Información
+            </a>
+        </nav>
+        <nav lang="en">
+            <a href="https://www.privacypolicies.com/live/a0544f29-fe33-4011-aaf6-c3c42d17bec6"
+                title="Terms of use and privacity">Terms of use and
+                privacity</a> |
+            <a href="https://www.privacypolicies.com/live/9d700e37-a66c-45e2-bd28-370b4a8cd014"
+                title="Tems of cookies">Terms of cookie
+                usage</a> |
+            <a href="informacion.html" title="more info"> Information </a>
+        </nav>
+    </footer>
+
+    <script src="../scripts/idiomas.js"></script>
+    <script src="../scripts/colores.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    </div>
+
+</body>
+
+</html>
